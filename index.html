@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>BAVI-TRAVEL</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">BAVI TRAVEL</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Trang chủ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Về chúng tôi</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#discover" class="nav__link">Khám phá</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#place" class="nav__link">Món ăn ngon nè</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__dark">
+                        <!-- Theme change button -->
+                        <span class="change-theme-name">Dark mode</span>
+                        <i class="ri-moon-line change-theme" id="theme-button"></i>
+                    </div>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Vuon_QG_Ba_Vi_2.JPG" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">Khám phá bằng những chuyến đi</span>
+                        <h1 class="home__data-title">Khám phá <br> vẻ đẹp của  <b>VQG <br> Ba Vì</b></h1>
+                        <a href="#" class="button">Khám phá </a>
+
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                    </div>
+
+                    <div class="home__info">
+                        <div>
+                            <span class="home__info-title">5 địa điểm đẹp </span>
+                            <a href="" class="button button--flex button--link home__info-button">
+                                xem thêm <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__info-overlay">
+                            <img src="data:image/jpeg;base64,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" alt="" class="home__info-img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">Thông tin về <br> VQG Ba Vì</h2>
+                        <p class="about__description">Núi Ba Vì có 3 đỉnh: đỉnh Vua có độ cao 1.296m, đỉnh Tản Viên có độ cao 1.227m và đỉnh Ngọc Hoa có độ cao 1.131m. Theo khảo sát gần đây nhất hệ động, thực vật của Vườn quốc gia Ba Vì rất phong phú và đa dạng với 2.181 loài cây gỗ, 503 loài cây thuốc, 65 loài thú, 194 loài chim, 61 loài bò sát, 27 loài lương cư và 552 loài côn trùng. Trong đó có nhiều loài quý hiếm được ghi trong sách đỏ, nhiều loài động thực vật đặc hữu…
+                        </p>
+                        <a href="#" class="button">Bạn có thích's</a>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQBJQRvT6JDkvSmcwgwrG8RaGbhIEy97xdA&usqp=CAU" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="https://www.vietfuntravel.com.vn/image/data/Ha-Noi/ba-vi/hinh-anh-vuon-quoc-gia-ba-vi-h2.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== DISCOVER ====================-->
+            <section class="discover section" id="discover">
+                <h2 class="section__title">Khám phá <br> VQG Ba Vì</h2>
+                
+                <div class="discover__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--==================== DISCOVER 1 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="https://vcdn1-dulich.vnecdn.net/2016/04/25/ANh-1-1461574506.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=C14wAJ-_Ovqpw__44hl7hg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Ba Vì</h2>
+                                <span class="discover__description">rất là mát</span>
+                            </div>
+                        </div>
+
+                        <!--==================== DISCOVER 2 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="https://naocungdi.com/wp-content/uploads/2019/05/mot-ngay-san-may-tai-vuon-quoc-gia-ba-vi.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Ba Vì </h2>
+                                <span class="discover__description">rất là lạnh</span>
+                            </div>
+                        </div>
+
+                        <!--==================== DISCOVER 3 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="https://vcdn1-dulich.vnecdn.net/2020/11/16/1-Hoa-da-quy-1605500827.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=XCZxv6Nlcr3h-Y-HXLovng" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Ba Vì</h2>
+                                <span class="discover__description">so's be au ti phun</span>
+                            </div>
+                        </div>
+
+                        <!--==================== DISCOVER 4 ====================-->
+                        <div class="discover__card swiper-slide">
+                            <img src="https://vietnamdiscovery.com/wp-content/uploads/2019/10/Inside-Ba-Vi-National-Park.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Ba Vì</h2>
+                                <span class="discover__description">rất's phờ roét</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== EXPERIENCE ====================-->
+            <section class="experience section">
+                <h2 class="section__title">Bạn đi cùng Team <br> CEM BING's?</h2>
+
+                <div class="experience__container container grid">
+
+
+                    <div class="experience__img grid">
+                        <div class="experience__overlay">
+                            <img src="https://bazantravel.com/cdn/medias/uploads/81/81509-cam-trai-da-lat-700x470.jpg" alt="" class="experience__img-one">
+                        </div>
+                        
+                        <div class="experience__overlay">
+                            <img src="https://digiticket.vn/blog/wp-content/uploads/2021/08/homestay-ba-v%C3%AC-15.jpg" alt="" class="experience__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== VIDEO ====================-->
+            <section class="video section">
+                <h2 class="section__title">Đây là hành trình </h2>
+
+                <div class="video__container container">
+                    <p class="video__description">Hãy tạo một kỷ niệm chuyến đi của bạn's
+                    </p>
+
+                    <div class="video__content">
+                        <video id="video-file">
+                            <source src="assets/video/video.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="button button--flex video__button" id="video-button">
+                            <i class="ri-play-line video__button-icon" id="video-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place" style="--text-color:#000 ">
+                <h2 class="section__title">Menu ẩm thực</h2>
+
+                <div class="place__container container grid">
+                    <!--==================== PLACES CARD 1 ====================-->
+                    <div class="place__card">
+                        <img src="https://product.hstatic.net/1000373773/product/shushi_i_390_x_390__1_of_1__c84410e41dd5487ea64d0fff15141219.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+
+                            <div class="place__data">
+                                <h3 class="place__title">Xu xi's</h3>
+                                <span class="place__subtitle"> Ăn niền's</span>
+                            </div>
+
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 2 ====================-->
+                    <div class="place__card">
+                        <img src="https://cf.shopee.vn/file/be87692d721ce22c5881fbba52f064c0" alt="" class="place__img">
+                        
+                        <div class="place__content">
+                            <div class="place__data">
+                                <h3 class="place__title">Chicken Grilled</h3>
+                                <span class="place__subtitle">Gà nướng siêu ngon nma chắc là đen</span>
+
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 3 ====================-->
+                    <div class="place__card">
+                        <img src="https://cdn.alongwalker.info/img/2020/8/7/d324f8ea6a097a44984410bae1d2ca1b.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+
+                            <div class="place__data">
+                                <h3 class="place__title">Meat pig's fruit</h3>
+                                <span class="place__subtitle">Thịt heo's nướng chắc là ngon</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 4 ====================-->
+                    <div class="place__card">
+                        <img src="https://anhdephd.vn/wp-content/uploads/2022/05/hinh-anh-xuc-xich-heo-cao-boi.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+
+
+                            <div class="place__data">
+                                <h3 class="place__title">SÚC SÍCH's grilled so fire</h3>
+                                <span class="place__subtitle">Chắc cũng cháy như này</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+
+                    <!--==================== PLACES CARD 5 ====================-->
+                    <div class="place__card">
+                        <img src="https://thewoksoflife.com/wp-content/uploads/2016/06/camping-ramen-4.jpg" alt="" class="place__img">
+                        
+                        <div class="place__content">
+
+
+                            <div class="place__data">
+                                <h3 class="place__title">Noodle with Onion</h3>
+                                <span class="place__subtitle">Mỳ lấu's vứi hành</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                    <div class="place__card">
+                        <img src="https://drinkwine.vn/wp-content/uploads/2021/05/ruou-vang-ochagavia-don-silvestre-cabernet-sauvignon.jpg" alt="" class="place__img">
+
+                        <div class="place__content">
+
+
+                            <div class="place__data">
+                                <h3 class="place__title">Drink </h3>
+                                <span class="place__subtitle">Nước ngọt vị cồn</span>
+                            </div>
+                        </div>
+
+                        <button class="button button--flex place__button">
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SUBSCRIBE ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__bg">
+                    <div class="subscribe__container container">
+                        <h2 class="section__title subscribe__title">Gửi tin nhắn  <br> viết một đoạn thư?</h2>
+                        <p class="subscribe__description">Bạn sẽ có một chuyến đi tuyệt vời
+                        </p>
+    
+                        <form action="" class="subscribe__form">
+                            <input type="text" placeholder="Enter email" class="subscribe__input">
+    
+                            <button class="button">
+                                Gửi cho Tiezn.
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== SPONSORS ====================-->
+<!--            <section class="sponsor section">-->
+<!--                <div class="sponsor__container container grid">-->
+<!--                    <div class="sponsor__content">-->
+<!--                        <img src="assets/img/sponsors1.png" alt="" class="sponsor__img">-->
+<!--                    </div>-->
+<!--                    <div class="sponsor__content">-->
+<!--                        <img src="assets/img/sponsors2.png" alt="" class="sponsor__img">-->
+<!--                    </div>-->
+<!--                    <div class="sponsor__content">-->
+<!--                        <img src="assets/img/sponsors3.png" alt="" class="sponsor__img">-->
+<!--                    </div>-->
+<!--                    <div class="sponsor__content">-->
+<!--                        <img src="assets/img/sponsors4.png" alt="" class="sponsor__img">-->
+<!--                    </div>-->
+<!--                    <div class="sponsor__content">-->
+<!--                        <img src="assets/img/sponsors5.png" alt="" class="sponsor__img">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div class="footer__data">
+                        <h3 class="footer__title">Ba Vì Travel</h3>
+                        <p class="footer__description">Không đi thì phí lắm  <br> nên đi? đi
+                           nên camping<br> đi.
+                        </p>
+                        <div>
+                            <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                <i class="ri-facebook-box-fill"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                <i class="ri-instagram-fill"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                <i class="ri-youtube-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">belo</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">belo</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Ntiezn</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Kanhhs</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">KhanhsTrangz</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">PhiYeusDuois</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">You?</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Really?</a>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer__data">
+                        <h3 class="footer__subtitle">Support</h3>
+                        <ul>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">FAQs</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Support Center</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="" class="footer__link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2022 NG.TIEZN. All rigths reserved.</p>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                        <a href="#" class="footer__terms-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+        
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
